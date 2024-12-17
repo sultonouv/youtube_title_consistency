@@ -7,7 +7,9 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import ast
-from api import openai_api_key
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class YouTubeContentChecker:
     def __init__(self, query: str, num_videos: int = 10):
@@ -118,7 +120,7 @@ class YouTubeContentChecker:
 if __name__ == "__main__":
     import os
 
-    os.environ["OPENAI_API_KEY"] = openai_api_key
+    os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
     query = input("What are you searching for: ")
     query_nums = input("How many results?")

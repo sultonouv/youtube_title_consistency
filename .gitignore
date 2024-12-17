@@ -1,3 +1,14 @@
+# Ignore .env file to keep secrets safe
 .env
-*.ipynb
+
+# Ignore Jupyter Notebook checkpoints
+*.ipynb_checkpoints
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore the API key file (if it exists)
 api.py
+
+# Add other files that should not be tracked
